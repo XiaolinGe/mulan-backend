@@ -1,0 +1,19 @@
+{
+  "currency": "NZD",
+  "balanceIncomings": [
+    {
+      "amount": 100,
+      "reference": "test1"
+    }
+  ],
+  "balanceSettlements": [
+    {
+      "amount": 200,
+      "reference": "test2"
+    }
+  ],
+  "endOfTheDay": 0,
+  "localDate": "2017-10-06",
+  "opening": 0,
+  "user": {"user": 10011}
+}

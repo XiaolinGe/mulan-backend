@@ -1,0 +1,12 @@
+server:
+    port: 9999
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: root
+        testWhileIdle: true
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/mulan?autoReconnect=true&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&characterEncoding=UTF-8
+        username: root
+        validationQuery: SELECT 1
+

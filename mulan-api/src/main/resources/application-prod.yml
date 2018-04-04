@@ -1,0 +1,30 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: mulan2017
+        testWhileIdle: true
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/mulan?autoReconnect=true&useSSL=false&useLegacyDatetimeCode=false&characterEncoding=utf8
+        validationQuery: SELECT 1
+    redis:
+      host: localhost
+      port: 6379
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: false
+
+c2b:
+  latipay:
+    callback-url: http://c2b.latipay.net/payment/callback
+    returnUrl: http://c2b.latipay.net/payment/return
+    paymentUrl: https://api.latipay.net/v2/transaction
+    settleUrl:  https://api.latipay.net/withdraw
+
+
+app:
+  domain: http://api.mulan.com
+

@@ -1,0 +1,81 @@
+spring:
+    application:
+        name: C2b
+    datasource:
+        connectionProperties: druid.stat.mergeSql=true;
+        #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        filters: stat,wall,slf4j
+        password: root
+        testWhileIdle: true
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/fee?autoReconnect=true&useSSL=false&characterEncoding=utf8
+        username: root
+        validationQuery: SELECT 1
+    jpa:
+        hibernate:
+            ddl-auto: update
+            naming:
+                strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: false
+
+
+    profiles:
+        active: local
+    redis:
+        host: localhost
+        port: 6379
+    session:
+        store-type: redis
+    http:
+        multipart:
+          max-file-size: 10MB
+    aop:
+      proxy-target-class: true
+
+
+app:
+  user-cookie: c2b_user
+  user-class: com.mulan.domain.Customer
+  jwt:
+    header: Authorization
+    # in seconds 10 day
+    expires-in: 864000
+    secret: queenvictoria
+    cookie: AUTH-TOKEN
+    param: token
+    anonymousUrls: /v1/beneficiary-bank-account,/payment/*,
+
+
+mail:
+  sender:
+   host: smtp.office365.com
+   timeout: 25000
+   port: 587
+   alias: client@latipay.co.nz
+   from: client@latipay.co.nz
+   username: client@latipay.co.nz
+   password: '@2!wW5mZWyuoONfP'
+
+
+aws:
+ s3:
+  bucket-name: cfg-attachments
+  access-key: AKIAIIQXOFVGZ5LKY46Q
+  secret-key: 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
+  region-link: https://s3-ap-southeast-2.amazonaws.com
+  key: collinson/
+
+
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: TRACE

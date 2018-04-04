@@ -1,0 +1,21 @@
+server:
+    port: 6666
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: root
+        testWhileIdle: true
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/fee?autoReconnect=true&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&characterEncoding=UTF-8
+        username: root
+        validationQuery: SELECT 1
+c2b:
+  latipay:
+    callback-url: http://c2b-dev.latipay.net/payment/callback
+    returnUrl: http://c2b-dev.latipay.net/payment/return
+    paymentUrl: https://api-staging.latipay.net/v2/transaction
+    settleUrl:  https://api-staging.latipay.net/withdraw
+
+app:
+  domain: http://c2b-dev.latipay.net
+

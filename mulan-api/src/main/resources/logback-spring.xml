@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <jmxConfigurator/>
+
+    <logger name="com.cfgglobal" level="ERROR"/>
+
+
+    <springProfile name="prod">
+        <logger name="com.cfgglobal" level="ERROR"/>
+    </springProfile>
+
+    <springProfile name="test">
+        <logger name="com.cfgglobal" level="INFO"/>
+    </springProfile>
+
+    <springProfile name="local">
+        <logger name="com.cfgglobal" level="INFO"/>
+        <logger name="org.hibernate.level" level="TRACE"/>
+    </springProfile>
+
+
+</configuration>

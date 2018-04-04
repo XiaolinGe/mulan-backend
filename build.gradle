@@ -1,0 +1,24 @@
+allprojects {
+    group = 'net.latipay.c2b'
+}
+
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "https://repo.spring.io/libs-release" }
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+    }
+    ext {
+        springVersion = "4.3.6.RELEASE"
+        springbootVersion = "1.5.1.RELEASE"
+        springbootAdminVersion = "1.5.0-SNAPSHOT"
+    }
+
+}

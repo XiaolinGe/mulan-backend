@@ -1,0 +1,30 @@
+{
+  "name": "name",
+  "rolePermissions": [
+     {
+      "permission": {
+        "id": 1
+      },
+      "rules": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "permission": {
+        "id": 2
+      },
+      "rules": [
+        {
+          "id": 1
+
+        }
+      ]
+    }
+  ]
+}
+

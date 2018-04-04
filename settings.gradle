@@ -1,0 +1,9 @@
+rootProject.name = 'latipay-c2b-backend'
+
+include "access-control-api"
+include "mulan-api"
+
+project(':access-control-api').projectDir = "$rootDir/access-control-api" as File
+project(':mulan-api').projectDir = "$rootDir/mulan-api" as File
+
+
